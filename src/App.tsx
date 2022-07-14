@@ -1,11 +1,14 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { FavoritesPage } from './pages/FavoritesPage';
+import { HomePage } from './pages/HomePage';
 
 function App() {
    return (
-      <div>
-         <h1 className='font-bold'>hello react</h1>
-         <div className='font'></div>
-      </div>
+      <Routes>
+         <Route path='/' element={<HomePage />} />
+         <Route path='/favorites' element={<FavoritesPage />} />
+      </Routes>
    );
 }
 
